@@ -7,7 +7,10 @@ app = FastAPI(title="Study Battle Generator")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Temporal para la demo
+    allow_origins=[
+        "https://study-battle-frontend-alpha.vercel.app",  # 👈 tu URL de Vercel
+        "http://localhost:5173",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
